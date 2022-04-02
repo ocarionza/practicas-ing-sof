@@ -1,54 +1,40 @@
 ###
-POST http://localhost:3000/api/v1/people/person HTTP/1.1
+POST http://localhost:3000/api/v2/series/serie HTTP/1.1
 Content-Type: application/json
 
 {
-  "name":"Brayan",
-  "lastname":"Ocampo",
-  "age": "20",
-  "address":{
-    "city":"Manizales",
-    "code_zip":"170002"
-  }
+ "serie": "lucifer",
+ "number_seasons": 3,
+ "original_language": "english",
+ "features_seasons":[{
+   "season_number": 1,
+   "season_name": "lucifer 1",
+   "premier_data": "2020-04-02",
+   "cast": ["lucifer", "detective"]
+ }]
 }
 
 ###
-GET http://localhost:3000/api/v1/people HTTP/1.1
+GET http://localhost:3000/api/v2/series HTTP/1.1
 
 ###
-GET http://localhost:3000/api/v1/people/622cd13adbeaf7b67bc5cee1 HTTP/1.1
+GET http://localhost:3000/api/v2/series/62487605d5748f9e7e23c6be HTTP/1.1
 
 ###
-PUT http://localhost:3000/api/v1/people/622cd13adbeaf7b67bc5cee1 HTTP/1.1
+PUT http://localhost:3000/api/v2/series/62487605d5748f9e7e23c6be HTTP/1.1
 Content-Type: application/json
 
 {
-  "name":"Brayayin",
-  "lastname":"Ocampo",
-  "age": "20",
-  "address":{
-    "city":"Bogota",
-    "code_zip":"110001"
-  }
+ "serie": "lucifer",
+ "number_seasons": 3,
+ "original_language": "english",
+ "features_seasons":[{
+   "season_number": 1,
+   "season_name": "lucifer 1",
+   "premier_data": "2020-04-02",
+   "cast": ["lucifer", "detective"]
+ }]
 }
 
 ###
-DELETE http://localhost:3000/api/v1/people/622cd13adbeaf7b67bc5cee1 HTTP/1.1
-
-###
-GET http://localhost:3000/api/v1/departaments HTTP/1.1
-
-###
-GET http://localhost:3000/api/v1/departaments/5 HTTP/1.1
-
-###
-GET http://localhost:3000/api/v1/departaments/filter/code HTTP/1.1
-
-###
-GET http://localhost:3000/api/v1/departaments/filter/search?departamentId=5 HTTP/1.1
-
-###
-GET http://localhost:3000/api/v1/departaments/filter/name?municipalityName=Cajibío HTTP/1.1
-
-###
-GET http://localhost:3000/api/v1/departaments/filter/letter HTTP/1.1
+DELETE http://localhost:3000/api/v2/series/62487605d5748f9e7e23c6be HTTP/1.1
