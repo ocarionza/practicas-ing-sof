@@ -45,6 +45,18 @@ client.messages
   .then((message) => console.log(`mensaje enviado ${message.sid}`))
   .catch((err) => console.log(err));
 
+// ================ Twilio WhatsApp SMS ========================
+
+client.messages
+  .create({
+    body: 'Hello my name is brayan, welcome to twilio WhatsApp',
+    from: 'whatsapp:+14155238886',
+    to: 'whatsapp:+573132515410',
+  })
+  .then((message) =>
+    console.log(`Mensaje Enviado por WhatsApp ${message.sid}`)
+  );
+
 // ===================== SENDGRID ==============================
 const email = require('./src/services/sendgrid/email');
 
