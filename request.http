@@ -1,40 +1,46 @@
 ###
-POST http://localhost:3000/api/v2/series/serie HTTP/1.1
+POST http://localhost:3000/api/v2/employee_info/employee_info HTTP/1.1
 Content-Type: application/json
 
 {
- "serie": "lucifer",
- "number_seasons": 3,
- "original_language": "english",
- "features_seasons":[{
-   "season_number": 1,
-   "season_name": "lucifer 1",
-   "premier_data": "2020-04-02",
-   "cast": ["lucifer", "detective"]
- }]
+  "name":"Brayan",
+  "lastname":"Ocampo",
+  "address":{
+    "geo":{
+      "lat":"115",
+      "ing":"54897"
+    },
+    "city":"Manizales",
+    "code_zip":"4564"
+  },
+  "department":"5",
+  "name_departament":"caldas"
 }
 
 ###
-GET http://localhost:3000/api/v2/series HTTP/1.1
+GET http://localhost:3000/api/v2/employee_info HTTP/1.1
 
 ###
-GET http://localhost:3000/api/v2/series/62487605d5748f9e7e23c6be HTTP/1.1
+GET http://localhost:3000/api/v2/employee_info/6261f0876a770ad7ed4d9fa1 HTTP/1.1
 
 ###
-PUT http://localhost:3000/api/v2/series/62487605d5748f9e7e23c6be HTTP/1.1
+PUT http://localhost:3000/api/v2/employee_info/6261f0876a770ad7ed4d9fa1 HTTP/1.1
 Content-Type: application/json
 
 {
- "serie": "lucifer",
- "number_seasons": 3,
- "original_language": "english",
- "features_seasons":[{
-   "season_number": 1,
-   "season_name": "lucifer 1",
-   "premier_data": "2020-04-02",
-   "cast": ["lucifer", "detective"]
- }]
+  "name":"Brayan",
+  "lastname":"Ocampo",
+  "address":{
+    "geo":{
+      "lat":"115",
+      "ing":"54897",
+    },
+    "city":"Pereira",
+    "code_zip":"4564",
+  },
+  "department":"5",
+  "name_departament":"risaralda",
 }
 
 ###
-DELETE http://localhost:3000/api/v2/series/62487605d5748f9e7e23c6be HTTP/1.1
+DELETE http://localhost:3000/api/v2/employee_info/6261f0876a770ad7ed4d9fa1 HTTP/1.1
